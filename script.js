@@ -24,13 +24,18 @@ botonConvertir.addEventListener('click', (event) => {
         return;
     }
 
+    const celsius = document.createElement('p');
+    celsius.textContent = `Grados Celsius ingresados: ${valorCelsius}`
+
     const kelvin = document.createElement('p');
     kelvin.textContent = `Grados Kelvin: ${convertirKelvin(valorCelsius)}`;
 
     const farenheit = document.createElement('p');
     farenheit.textContent = `Grados Fahrenheit: ${covertirFarenheit(valorCelsius)}`;
 
+    contenedor.appendChild(celsius)
     contenedor.appendChild(kelvin);
     contenedor.appendChild(farenheit);
 
+    gradosCelsius.value = "";
 })
